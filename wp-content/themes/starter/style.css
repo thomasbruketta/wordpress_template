@@ -1,0 +1,344 @@
+/*   
+Theme Name: Starter theme
+Description: Barebones theme that includes lots of useful functionality such as inserting page content, declaring sidebars, declaring menus, dynamically appearing submenu options, etc. 
+Author: Harmonic Northwest
+Author URI: www.harmonicnw.com
+Template:
+Version: 0.0
+.
+Created Oct 2011
+.
+*/
+
+* {
+	margin: 0;
+	padding: 0;
+	}
+	
+body {
+	font: normal 12px verdana, arial, sans-serif;
+	}
+	
+a {
+	color: #0066dd;
+	}
+	
+img a {
+	border: none;
+	}
+	
+.callout {
+	background: #eee;
+	clear: none;
+	float: left;
+	height: 180px;
+	margin: 20px 0 0 20px;
+	width: 215px;
+	}
+.callout h2 {
+	font-size: 14px;
+	margin: 0.5em 10px;
+	}
+.callout p,
+.callout ul {
+	margin: 0.5em 10px;
+	}
+.calloutLeft {
+	clear: both;
+	margin-left: 0;
+	}
+.error {
+	color: #d00;
+	font-weight: bold;
+	}
+.infobox {
+	background: #ddd;
+	clear: none;
+	float: left;
+	height: 180px;
+	margin: 20px 0 0 20px;
+	width: 293px;
+	}
+.infobox h2 {
+	font-size: 14px;
+	margin: 0.5em 10px;
+	}
+.infobox p,
+.infobox ul {
+	margin: 0.5em 10px;
+	}
+.infoboxLeft {
+	margin-left: 0;
+	clear: both;
+	}
+.infoboxMiddle {
+	width: 294px;
+	}
+	
+.tabsInitialized {
+	clear: both;
+	float: left;
+	margin-top: 20px;
+	position: relative;
+	width: 100%;
+	}
+.tabsInitialized h1,
+.tabsInitialized h2,
+.tabsInitialized h3 {
+	background: #ccc;
+	clear: none;
+	cursor: pointer;
+	float: left;
+	height: 23px;
+	margin-right: 1px;
+	padding: 4px 7px 0 7px;
+	width: auto;
+	}
+.tabsInitialized .active {
+	background: #eee;
+	}
+.tabsInitialized .content {
+	background: #eee;
+	position: absolute;
+	top: 27px;
+	width: 100%;
+	}
+	
+.wrapper {
+	margin: 0 auto 10px;
+	padding: 0 20px 20px;
+	width: 920px;
+	}
+.wrapper2 {
+	background: #fff;
+	clear: both;
+	float: left;
+	padding: 0;
+	width: 920px;
+	}
+	
+#account {
+	clear: right;
+	float: right;
+	list-style: none;
+	width: auto;
+	}
+#account li {
+	display: inline;
+	}
+	
+#banner {
+	background: #eee;
+	clear: both;
+	float: left;
+	height: 200px;
+	width: 100%;
+	}
+	
+#footer {
+	clear: both;
+	float: left;
+	margin-top: 20px;
+	text-align: center;
+	width: 100%;
+	}
+#footer .nav {
+	list-style: none;
+	}
+#footer .nav li {
+	display: inline;
+	}
+		
+#logo {
+	clear: none;
+	float: left;
+	font-size: 0.1em;
+	height: 67px;
+	line-height: 0.1em;
+	width: 174px;
+	}
+	
+#main {
+	clear: none;
+	float: left;
+	min-height: 400px;
+	width: 544px;
+	}
+#main.mainWide {
+	width: 732px;
+	}
+#main h1 {
+	margin: 0.5em 0;
+	}
+#main p {
+	margin: 1em 0;
+	}
+#main ol {
+	margin: 1em 40px;
+	}
+#main ul {
+	margin: 1em 40px;
+	}
+#main .datasheet {
+	background: #eee;
+	clear: none;
+	float: right;
+	margin-top: 8px;
+	text-align: center;
+	width: 270px;
+	}
+#main .related {
+	clear: both;
+	float: left;
+	margin-top: 2em;
+	width: 100%;
+	}
+#main .wp-caption {
+	clear: left;
+	float: left;
+	margin: 0 20px 20px 0;
+	width: auto;
+	}
+#main .wp-caption a {
+	display: block;
+	}
+#main .wp-caption-text {
+	font-size: 9px;
+	margin: 4px 15px 0 5px;
+	text-align: center;
+	}
+	
+/* keep below other #main rules */
+#main .alignleft,
+#main .alignnone {
+	clear: left;
+	float: left;
+	margin: 0 20px 20px 0;
+	width: auto;
+	}
+#main .alignright {
+	clear: right;
+	float: right;
+	margin: 0 0 20px 20px;
+	width: auto;
+	}
+	
+#nav {
+	background: #ddd;
+	clear: both;
+	float: left;
+	margin: 10px 0 20px;
+	width: 100%;
+	}
+#nav ul {
+	list-style: none;
+	}
+#nav ul li {
+	clear: none;
+	float: left;
+	display: block;
+	margin-right: 1px;
+	position: relative;
+	width: auto;
+	}
+#nav ul li a {
+	background: #aaa;
+	clear: both;
+	display: block;
+	float: left;
+	height: 16px;
+	text-decoration: none;
+	padding: 3px 4px;
+	width: auto;
+	}
+#nav ul li a:hover {
+	color: #333;
+	}
+#nav ul li.current-menu-item ul li a {
+	color: #0066dd;
+	}
+#nav ul li.current-menu-item ul li a:hover {
+	color: #223344;
+	}
+#nav ul.children {
+	background: #aaa;
+	display: none;
+	position: absolute;
+	top: 22px;
+	width: auto;
+	z-index: 5;
+	}
+#nav ul.children li {
+	clear: both;
+	}
+#nav ul.children li a {
+	height: auto;
+	white-space: nowrap;
+	}
+#nav ul.children li.current-menu-item a {
+	color: #0066dd;
+	}
+#nav ul.children li.current-menu-item a:hover {
+	color: #223344;
+	}
+	
+#search {
+	clear: none;
+	float: right;
+	margin-top: 10px;
+	width: auto;
+	}
+	
+#sidebarLeft {
+	background: #eee;
+	clear: both;
+	float: left;
+	min-height: 40px;
+	margin-right: 20px;
+	width: 168px;
+	}
+#sidebarLeft .subnav,
+#sidebarLeft .subnav ul {
+	list-style: none;
+	}
+#sidebarLeft .subnav li ul {
+	margin-left: 10px;
+	}
+#sidebarLeft .subnav li.current_page_item a {
+	color: #000;
+	text-decoration: none;
+	}
+#sidebarLeft .subnav li.current_page_item ul li a {
+	color: #0066dd;
+	text-decoration: underline;
+	}
+	
+#sidebarRight {
+	clear: none;
+	float: left;
+	margin-left: 20px;
+	width: 168px;
+	}
+#sidebarRight h2 {
+	margin-top: 20px;
+	}
+#sidebarRight ul {
+	list-style: none;
+	}
+#sidebarRight .sidebarItem {
+	background: #eee;
+	height: 140px;
+	margin-bottom: 20px;
+	}
+	
+#social {
+	clear: none;
+	float: left;
+	list-style: none;
+	margin: 20px 0 0 70px;
+	text-align: center;
+	width: 400px;
+	}
+#social li {
+	display: inline;
+	}

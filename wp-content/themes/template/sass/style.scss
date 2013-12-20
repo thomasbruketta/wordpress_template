@@ -1,0 +1,155 @@
+@import "compass/css3";
+
+@mixin breakpoint($point) {
+  @if $point == reader {
+    @media (min-width: 384px) { @content; }
+  }
+  @else if $point == tablet {
+    @media (min-width: 768px) { @content; }
+  }
+  @else if $point == desktop {
+    @media (min-width: 992px)  { @content; }
+  }
+  @else if $point == large {
+    @media (min-width: 1200px)  { @content; }
+  }
+}
+
+$text-color: #464646;
+$link-color: #6f6cc4;
+$link-hover-color: #bfbdff;
+$text-margin: 1em;
+
+* {
+	margin: 0;
+	padding: 0;
+}
+	
+body {
+	background: #fff;
+	color: $text_color;
+	font-family: verdana, sans-serif;
+	font-weight: 300;
+	font-size: 14px;
+	line-height: 1.8em;
+}
+
+a {
+	color: $link-color;
+	
+	&:hover {
+		color: $link-hover-color;
+		text-decoration: none; 
+	}
+}
+
+p,
+ul,
+ol,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.row {
+	&:first-child {
+		margin-top: 0;
+	}
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+p,
+ul,
+ol {
+	line-height: 1.6em;
+	margin-bottom: $text-margin;
+}
+
+.row {
+	margin-bottom: $text-margin;	
+}
+
+.col-md-1,
+.col-md-2,
+.col-md-3,
+.col-md-4,
+.col-md-5,
+.col-md-6,
+.col-md-7,
+.col-md-8,
+.col-md-9,
+.col-md-10,
+.col-md-11,
+.col-md-12 {
+	margin-bottom: $text-margin;
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+	
+	@include breakpoint(tablet) {
+		margin-bottom: 0;
+	}
+}
+
+p,
+ul,
+ol {
+	line-height: 1.6em;
+	margin-bottom: 1em;	
+}
+
+p:first-child,
+ul:first-child,
+ol:first-child,
+h1:first-child,
+h2:first-child {
+	margin-top: 0;
+}
+
+p:last-child,
+ul:last-child,
+ol:last-child,
+h1:last-child,
+h2:last-child {
+	margin-bottom: 0;
+}
+
+footer {
+	background-color:#5e5f5c;
+	color:#FFF;	
+	padding:10px 0;
+	
+}
+
+section {
+	padding:20px 0;
+}
+
+.callouts {
+
+	text-align: center;
+}
+
+
+.navbar-default {
+	background-color: transparent;
+	border: none;
+}
+
+.navbar-brand {
+	padding-left: 0
+}
+
+
+
+.navbar-brand img{
+	width: 20%;
+	height: auto;
+}
+
+.post {
+	margin-bottom: 15px;
+}
