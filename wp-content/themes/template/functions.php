@@ -1,5 +1,5 @@
 <?php
-
+//
 // use most recent jquery version
  if( !is_admin() ){
 	wp_deregister_script('jquery');
